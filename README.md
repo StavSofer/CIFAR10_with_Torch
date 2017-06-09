@@ -1,12 +1,16 @@
 # CIFAR10_with_Torch
 
-Goals:</br>
+**Goals**:</br>
   *Parameters < 50,000</br>
   *Accuracy > 80%
+  
+ **Results** :+1:</br>
+ Accuracy = 0.826</br>
+ Number of parameters = 49706</br>
+ Number of training epochs = 300
 
-### Our model
+### Model - 
 ```
-  Number of parameters: 49706
   (1): nn.BatchFlip
   (2): cudnn.SpatialConvolution(3 -> 32, 5x5, 1,1, 2,2)
   (3): cudnn.SpatialBatchNormalization
@@ -39,10 +43,4 @@ Goals:</br>
   (30): nn.View(128)
   (31): nn.Linear(128 -> 10)
   (32): nn.LogSoftMax
-```
-
-**Best accuracy** :+1:
-```
-$ th loader.lua --model finalModel-16Batch-Error0.17327724358974-Epoch105
-Test error: 0.17327724358974  Test Loss: 0.52766063580146 
 ```
